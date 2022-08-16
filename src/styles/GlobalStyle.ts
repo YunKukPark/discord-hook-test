@@ -10,9 +10,14 @@ const GlobalStyle = createGlobalStyle`
   }
 
   html {
+    font-family: ${({ theme }) => theme.fontFamily.main};
+    font-size: ${({ theme }) => theme.fontsize.base};
+    letter-spacing: ${({ theme }) => theme.letterSpacing.base};
   }
 
   body {
+    font-family: ${({ theme }) => theme.fontFamily.main};
+    color: ${({ theme }) => theme.color.primary};
   }
 
   h1 {
