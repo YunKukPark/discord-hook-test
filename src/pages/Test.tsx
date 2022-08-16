@@ -5,6 +5,7 @@ const Test = () => {
     <Styled.Container>
       <Styled.Card>
         <Styled.Title>TEST PAGE</Styled.Title>
+        <Styled.Title>base font 잘 들어왔는지 확인</Styled.Title>
       </Styled.Card>
     </Styled.Container>
   );
@@ -19,7 +20,6 @@ type TitleType = {
 };
 
 const Styled = {
-  // style 관리
   Container: styled.div`
     display: flex;
     justify-content: center;
@@ -35,12 +35,13 @@ const Styled = {
     width: 300px;
     height: 300px;
     border-radius: 16px;
-    background-color: ${({ theme }) => theme.black};
+    background-color: ${({ theme }) => theme.color.black};
   `,
 
   Title: styled.h1<TitleType>`
     color: #fff;
-    font-size: ${({ theme }) => `${theme.md}px`};
+    font-family: ${({ theme }) => theme.fontFamily.main};
+    font-size: ${({ theme }) => theme.fontsize.lg};
     font-weight: 700;
   `,
 };
