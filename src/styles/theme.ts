@@ -1,11 +1,12 @@
+import { DefaultTheme } from 'styled-components';
+
 const breakpoints = {
   tablet: '768px',
   desktop: '1200px',
 };
 
-const fontFamilies = {
+const fontFamily = {
   main: 'Noto Sans KR, sans-serif',
-  price: 'Tahoma, sans-serif',
 };
 
 const color = {
@@ -61,14 +62,15 @@ const spacing = {
 
 export const gutter = 10;
 
-const theme = {
+const theme: DefaultTheme = {
   breakpoints,
-  fontFamilies,
+  fontFamily,
   color,
   fontsize,
   lineHeight,
   letterSpacing,
   spacing,
+  gutter,
 };
 
 export default theme;
