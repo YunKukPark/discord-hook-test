@@ -2,12 +2,14 @@ import App from 'App';
 import Test from 'pages/Test';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import { ThemeProvider } from 'styled-components';
+import { GlobalStyle } from 'styles/GlobalStyle';
 import theme from 'styles/theme';
 
 const Router = () => {
   return (
     <BrowserRouter>
       <ThemeProvider theme={theme}>
+        <GlobalStyle />
         <Routes>
           <Route path="/" element={<App />} />
           <Route path="/test" element={<Test />} />

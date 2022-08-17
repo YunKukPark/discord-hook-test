@@ -1,6 +1,9 @@
 import { createGlobalStyle } from 'styled-components';
+import reset from 'styled-reset';
 
-const GlobalStyle = createGlobalStyle`
+export const GlobalStyle = createGlobalStyle`
+  ${reset}
+
    * {
     margin: 0;
     -moz-osx-font-smoothing: grayscale;
@@ -9,12 +12,15 @@ const GlobalStyle = createGlobalStyle`
   }
 
   html {
+    margin: 0;
     font-family: ${({ theme }) => theme.fontFamily.main};
     font-size: ${({ theme }) => theme.fontsize.base};
     letter-spacing: ${({ theme }) => theme.letterSpacing.base};
   }
 
   body {
+    margin: 0;
+    padding: 0;
     font-family: ${({ theme }) => theme.fontFamily.main};
     color: ${({ theme }) => theme.color.primary};
   }
@@ -60,5 +66,3 @@ const GlobalStyle = createGlobalStyle`
     font-style: normal;
   }
 `;
-
-export default GlobalStyle;
