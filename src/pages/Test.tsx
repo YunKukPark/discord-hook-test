@@ -1,11 +1,15 @@
+import Button from 'components/Button';
 import styled from 'styled-components';
+import { flexBox } from 'styles/utils/flexbox';
 
 const Test = () => {
   return (
     <Styled.Container>
       <Styled.Card>
         <Styled.Title>TEST PAGE</Styled.Title>
-        <Styled.Title>base font 잘 들어왔는지 확인</Styled.Title>
+        <Button type="primary" size="lg" onClick={() => console.log('반갑다')}>
+          children
+        </Button>
       </Styled.Card>
     </Styled.Container>
   );
@@ -21,17 +25,15 @@ type TitleType = {
 
 const Styled = {
   Container: styled.div`
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    ${flexBox()}
     width: 100%;
     height: 100vh;
+    background-color: #5d5d5d;
   `,
 
   Card: styled.div<CardType>`
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    ${flexBox()}
+    flex-direction: column;
     width: 300px;
     height: 300px;
     border-radius: 16px;
@@ -43,6 +45,7 @@ const Styled = {
     font-family: ${({ theme }) => theme.fontFamily.main};
     font-size: ${({ theme }) => theme.fontsize.lg};
     font-weight: 700;
+    margin-bottom: 30px;
   `,
 };
 
