@@ -1,6 +1,5 @@
 import { createGlobalStyle } from 'styled-components';
 
-//TODO: global style guide 나오면 font-family, font-size 등 normalize-css추가 할 것
 const GlobalStyle = createGlobalStyle`
    * {
     margin: 0;
